@@ -8,7 +8,7 @@
   <title></title>
 </head>
 <body>
-  <canvas id="c" width="300" height="300"></canvas>
+  <canvas id="c" width="500" height="500"></canvas>
   <script type="text/javascript">
   var c = document.querySelector("#c");
   var ctx = c.getContext("2d");
@@ -19,6 +19,9 @@
     console.log("Loaded image");
     ctx.drawImage(image, 0, 0, c.width, c.height);
   }
+  //
+  ctx.fillRect(100,100,100,100);
+  ctx.strokeRect(50,50,50,50);
 
   </script>
 </body>
