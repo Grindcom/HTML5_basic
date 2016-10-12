@@ -19,7 +19,7 @@
   var data = ctx.getImageData(0,0,400,400);
   //
   function paintGreen(imageData){
-    // find the number of pixels in each element R,G,B,A (A is the solidity of the image)
+    // find the number of pixels in each element R,G,B,A (Alpha is the solidity of the image)
     var numPixels = imageData.data.length / 4;
     // Iterate through the image and change each 10th to green, have to also change the A value so it can be seen.
     for(var i = 0; i < numPixels; i++){
