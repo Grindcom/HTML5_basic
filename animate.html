@@ -2,15 +2,33 @@
 <!-- Build for Udacity's Front-end Developer: HTML5 basic course, pixel to Animation -->
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Pixel to Animation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="author" content="Greg Ford">
-  </head>
-  <body>
-
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Pixel to Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="Greg Ford">
+</head>
+<body>
+  <canvas id="canvas" width="300" height="300"></canvas>
+  <script type="text/javascript">
+  // Create a square out of the canvas with every 10th pixel to solid green
+  var canvas = document.querySelector("#canvas");
+  var ctx = canvas.getContext("2d");
+  var data = ctx.getImageData(0,0,400,400);
+  //
+  function paintGreen(imageData){
+    // find the number of pixels in each element R,G,B,A (A is the solidity of the image)
+    var numPixels = imageData.data.length / 4;
+    // Iterate through the image and change each 10th to green, have to also change the A value so it can be seen.
+    for(var i = 0; i < numPixels; i++){
+      imageData.data[i*4+1] = 255;
+      imageData.data[i*4+3] = 255;
+    }
+    ctx.putImageData(imageData, 0, 0);
+  }
+  paintGreen(data);
+  </script>
+</body>
 </html>
