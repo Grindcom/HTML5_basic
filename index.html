@@ -13,16 +13,25 @@
   var c = document.querySelector("#c");
   var ctx = c.getContext("2d");
   //
-  var image = new Image();
-  image.src = "fry.jpg";
-  image.onload = function(){
-    console.log("Loaded image");
-    ctx.drawImage(image, 0, 0, c.width, c.height);
-  }
+  // var image = new Image();
+  // image.src = "fry.jpg";
+  // image.onload = function(){
+  //   console.log("Loaded image");
+  //   ctx.drawImage(image, 0, 0, c.width, c.height);
+  // }
   //
-  ctx.fillRect(100,100,100,100);
-  ctx.strokeRect(50,50,50,50);
-
+  ctx.fillRect(100,100,100,100);// Filled in rectangles
+  ctx.strokeRect(50,50,50,50);// Outlined rectangles
+  //
+  // Make a tipped triangle
+  //
+  ctx.beginPath();
+  ctx.moveTo(10,10);// move to start point
+  ctx.lineTo(50,50);// draw a lint to next point
+  ctx.lineTo(50,10);// and next
+  ctx.lineTo(10,10);// and back to start
+  ctx.fill();// Fill area within lines
+  // ctx.stroke();// Show lines only
   </script>
 </body>
 </html>
