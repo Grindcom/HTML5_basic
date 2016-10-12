@@ -32,6 +32,20 @@
   ctx.lineTo(75,75);// and back to start
   ctx.fill();// Fill area within lines
   // ctx.stroke();// Show lines only
+  // Save the state at this point
+  ctx.save();
+  //
+  ctx.fillStyle = "blue";
+  ctx.fillRect(0,0,50,50);
+  //
+  ctx.save();
+  //
+  ctx.fillStyle = "green";
+  ctx.fillRect(100,100,10,10);
+  // Restor to previous
+  ctx.restore();
+  //
+  ctx.fillRect(200,10,20,20);
   </script>
 </body>
 </html>
