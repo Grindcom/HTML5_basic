@@ -48,8 +48,10 @@
     var canvas = document.querySelector('canvas');
     var ctx = canvas.getContext("2d");
     // Your code here
-    // Display selected image
-    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    // If the image isn't null
+    if(image){// Display selected image
+      ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    }
     //
     // Initialize text
     //
