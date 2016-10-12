@@ -21,36 +21,37 @@
   // }
   //
   // ctx.fillRect(100,100,100,100);// Filled in rectangles
-  ctx.strokeRect(50,50,100,100);// Outlined rectangles
-  //
-  // Make a tipped triangle
-  //
-  ctx.beginPath();
-  ctx.moveTo(75,75);// move to start point
-  ctx.lineTo(125,75);// draw a lint to next point
-  ctx.lineTo(125,125);// and next
-  ctx.lineTo(75,75);// and back to start
-  ctx.fill();// Fill area within lines
-  // ctx.stroke();// Show lines only
-  // Save the state at this point
-  ctx.save();
-  //
-  ctx.fillStyle = "blue";
-  ctx.fillRect(0,0,50,50);
-  //
-  ctx.save();
-  //
-  ctx.fillStyle = "green";
-  ctx.fillRect(100,100,10,10);
-  // Restor to previous
-  ctx.restore();
-  //
-  ctx.fillRect(200,10,20,20);
+  // ctx.strokeRect(50,50,100,100);// Outlined rectangles
+  // //
+  // // Make a tipped triangle
+  // //
+  // ctx.beginPath();
+  // ctx.moveTo(75,75);// move to start point
+  // ctx.lineTo(125,75);// draw a lint to next point
+  // ctx.lineTo(125,125);// and next
+  // ctx.lineTo(75,75);// and back to start
+  // ctx.fill();// Fill area within lines
+  // // ctx.stroke();// Show lines only
+  // // Save the state at this point
+  // ctx.save();
+  // //
+  // ctx.fillStyle = "blue";
+  // ctx.fillRect(0,0,50,50);
+  // //
+  // ctx.save();
+  // //
+  // ctx.fillStyle = "green";
+  // ctx.fillRect(100,100,10,10);
+  // // Restor to previous
+  // ctx.restore();
+  // //
+  // ctx.fillRect(200,10,20,20);
   //
   // Draw text
   //
   // Set font size and type
-  ctx.font = "36px impact"
+  ctx.font = "36px Impact"
+  ctx.textAlign = 'center';
   // Set outline color
   ctx.strokeStyle = "black";// this is the default color
   // Set fill color
@@ -58,8 +59,8 @@
   // Set the stroke width
   ctx.lineWidth = 3;
   // Place text
-  ctx.strokeText("CANVAS MEMES!",50,50);// Outline text
-  ctx.fillText('CANVAS MEMES!',50,50);// Filled text
+  ctx.strokeText("CANVAS MEMES!",c.width / 2,40);// Outline text
+  ctx.fillText('CANVAS MEMES!',c.width / 2,40);// Filled text
 
   </script>
 </body>
