@@ -28,6 +28,18 @@
     }
     ctx.putImageData(imageData, 0, 0);
   }
+
+  var image = new Image();
+  image.src = "fry.jpg";
+  image.onload = function(){
+    console.log("Loaded image");
+    ctx.drawImage(image, 25, 20, canvas.width, canvas.height);
+  }
+
+  /*****************************
+  *  OPERATIONAL area
+  *
+  *****************************/
   paintGreen(data);
   </script>
 </body>
