@@ -1,0 +1,25 @@
+!<!DOCTYPE html>
+<!-- Built for the Front-end Developer: HTML5 basic course -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <canvas id="c" width="300" height="300"></canvas>
+  <script type="text/javascript">
+  var c = document.querySelector("#c");
+  var ctx = c.getContext("2d");
+  //
+  var image = new image();
+  image.src = "fry.jpg";
+  image.onload = function(){
+    console.log("Loaded image");
+    ctx.drawImage(image, 0, 0, c.width, c.height);
+  }
+
+  </script>
+</body>
+</html>
