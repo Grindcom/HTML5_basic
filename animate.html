@@ -22,12 +22,12 @@
   //
   var image = new Image();
   image.src = "fry.jpg";
-  // image.onload = function(){
-  //   console.log("Loaded image");
-  //   ctx.drawImage(image, 0, 0);
-  //   var d = ctx.getImageData(0,0,640,426);
-  //   console.log(d);
-  // }
+  image.onload = function(){
+    console.log("Loaded image");
+    ctx.drawImage(image, 0, 0);
+    // var d = ctx.getImageData(0,0,640,426);
+    // console.log(d);
+  }
   //
   function paintGreen(imageData){
     console.log("paint green");
